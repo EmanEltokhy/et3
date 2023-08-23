@@ -1,0 +1,26 @@
+for p1:
+
+    The extract_images function takes three arguments: source_folder, destination_folder, and report_file. It performs the following tasks:
+
+    1.Creates the destination_folder if it doesn't exist.
+    2.Opens the report_file in write mode and writes the header row to the CSV file.
+    3.Traverses all folders and sub-folders within the source_folder.
+    4.For each file, checks if it is an image (with extensions .png, .jpg, or .jpeg).
+    5.Copies the image file from the source folder to the destination folder using shutil.copy2.
+    6.Retrieves information about the image, such as its size and last modification date.
+    7.Removes the prefix from the image name by splitting it using the hyphen character.
+    8.Writes the image information to the CSV file using the writerow method of csv.DictWriter.
+
+    To use this code, you can adjust the last line (extract_images('D:/eman/internship/dairies',
+        'D:/eman/internship/dataset', 'D:/eman/internship/report.csv')) according to your requirements.
+
+for p2:
+
+    1.Initialize a dictionary named data that represents the data structure for storing annotations and image information.
+      it contains an empty list result within the annotations key, and the image file path is specified under the data key.
+    2.Reads the content of a text file which presumably contains annotation information. It iterates over each line in the file,
+      extracts the line, and splits it into individual values based on whitespaces.
+    3.For each line, a dictionary is created. It contains key and values are populated with the corresponding split values from
+      the line, converting them to rhe appropriate data types.
+    4.The created dictionary is the appended to the list within the annotations key of the data dictionary.
+    5. Converts the dictionary into a json string is then written to a json file.

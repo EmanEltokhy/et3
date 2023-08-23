@@ -17,7 +17,7 @@ with open('D:/eman/internship/image1.txt', 'r') as txtfile:
     # Read all lines from the file
     lines = txtfile.readlines()
     for line in lines:
-        # Extract the desired line (assuming it's the first line)
+        # Extract line
         line = line.strip()
 
         # Split the line into individual values
